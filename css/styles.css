@@ -1,0 +1,436 @@
+:root{
+    --IRIS: #4D5AE5;
+    --WHITE: #FFFFFF;
+    --CLOUD: #F4F4FD;
+    --CORNFLOWER: #E7E9FC;
+    --NAVY: #2E2F42;
+    --SLATE:#434455;
+    --OCEAN: #404BBF;
+}
+body{
+font-family: Roboto;
+font-size: 16px;
+font-style: normal;
+font-weight: 400;
+line-height: 24px; /* 150% */
+letter-spacing: 0.32px;
+max-width: 1158px;
+    
+}
+.logo{
+text-decoration: none;
+font-family: "raleway",sans-serif  ;
+font-size: 18px;
+font-weight: 800;
+line-height: 21px;
+letter-spacing: 0.54px;
+text-transform: uppercase;
+}
+.logo span {
+    color: var(--IRIS);  
+}
+nav .logo{
+    color: var(--NAVY);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    
+}
+footer .logo{
+    color: var(--CLOUD);
+   }
+.nav-link{
+    font-weight: 500;
+    line-height: 1.5;
+    letter-spacing: 0.32;
+    color: var(--NAVY);
+    text-decoration: none;  
+}
+.active{
+    color:var(--OCEAN);
+}
+.active::after{
+    content:"";
+    display:block;
+    height: 4px;
+    width:100%;
+    background-color: var(--OCEAN);
+    position:relative;
+    top:15px;
+
+}
+.nav-link:hover, .nav-link:focus{
+    color: var(--IRIS);
+}
+.label-menu{
+    display:flex;
+    text-align: center;
+}
+.hero {
+   background:linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),url("../images/people-office.jpg") ;
+   background-size: cover;
+   background-repeat: no-repeat;
+    color: var(--WHITE);
+    width: 1158px;
+    padding-top: 188px;
+    padding-bottom: 188px;
+    text-align: center;
+    max-width: 1158px;
+    
+    }
+.hero-name{
+    text-align: center;
+    font-size: 56px;
+    font-weight: 700;
+    line-height: 107.143%;
+    letter-spacing: 1.12px;
+}
+.order-btn{
+background-color: var(--IRIS);
+color: var(--WHITE, #FFF);
+text-align: center; 
+border-radius: 4px;
+padding: 16px 32px;
+}
+.backdrop {
+  background-color: rgba(0,0,0,0.4);
+  position: fixed;
+  top:0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 250ms cubic-bezier(0.4,0,0.2,1);
+}
+.modal{
+    width: 508px;
+    height: 700px;
+    background-color: white;
+    border-radius: 4px;
+    padding: 24px;
+}
+.is-hidden{
+pointer-events: none;
+opacity: 0;
+}
+.modal-close-btn{
+    border-radius: 100%;
+    border:1px solid rgba(0,0,0,0.1);
+    background-color: white;
+    width: 30px;
+    height: 30px;
+    color: var(--OCEAN);
+    margin-left: auto;
+    display: block;
+    transition: fill 250ms cubic-bezier(0.4,0,0.2,1), border cubic-bezier(0.4,0,0.2,1);
+    cursor: pointer;
+    display:flex;
+    align-items: center;
+    justify-content: center; 
+
+}
+.modal-close-btn:hover{
+    fill:currentColor;border:1px solid currentColor; 
+}
+.black{
+    color:black;
+}
+.service-input{
+    padding: 12px 40px;
+    border:1px solid #2E2F42;
+    border-radius: 4px;
+    transition: 250ms;
+    transition-property: color, border-color, background-color;
+    transition-timing-function: cubic-bezier(0.4,0,0.2,1);
+}
+.service-label{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 30px; 
+    position: relative;
+    width: 100%;
+}
+.input-label{
+    color:black;
+    text-align: left;
+    margin-bottom: 8px;;
+}
+.service-icon{
+    position:absolute;
+    top: 45px;
+    left:15px;
+    fill:black;
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    
+}
+.service-input:focus +.service-icon,
+.service-input:hover + .service-icon,
+textarea.service-text{
+        fill:var(--IRIS);
+}
+.service-input:hover,
+textarea.service-text:hover{
+    border: 1px solid var(--IRIS);
+}
+.service-text{
+    border:1px solid #2E2F42;
+    border-radius: 4px;
+    transition: 250ms;
+    transition-property: color, border-color, background-color;
+    transition-timing-function: cubic-bezier(0.4,0,0.2,1);
+    padding: 8px;
+}
+h3{
+    font-size: 20px;
+    line-height: 120%;
+    letter-spacing: 0.4px;
+}
+h2 {
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 111.111%;
+    text-transform: capitalize;
+    text-align: center;
+}
+
+
+ul.list {
+    list-style: none;
+    text-decoration: none;
+    padding-left: 0px;
+    color: var(--NAVY);
+    font: size 16px;
+    font-weight: 500;
+    line-height: 150%;
+    letter-spacing: 0.32px;
+    display:flex;
+    text-align: center;
+    
+}
+
+div ul.list li a{
+    color: var(--navy);
+    list-style: none;
+    text-decoration: none;
+    padding-left: 0px;
+    justify-content:space-around;
+}
+
+.bg-dark{
+    text-align: left;
+    background-color: var(--NAVY);
+    color: var(--WHITE);
+    width: 1440px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.container{
+    width: 1440px;
+}
+    
+
+header .main-header{
+    display: flex;
+    justify-content: space-around;
+    padding-right: 40px;
+}
+header .style-flex{
+    justify-content: space-around;
+    text-align: center;
+    padding-left: 40px;
+    padding-right: 40px;
+}
+
+.disflex{
+    display:flex;
+    align-items: center;
+    text-decoration: none;
+    gap: 40px;
+   
+}
+.main-header{
+    display:flex;
+    align-items: center;
+    justify-content: space-around;
+}
+header .list{
+    gap: 40px;
+}
+.section{
+    padding-top:120px;
+    padding-bottom:120px;
+    width: 1158px;
+    font-size: 36;
+    
+}
+img{
+    padding-right: 10px;
+}
+.s-list{
+    display: flex;
+    list-style: none;
+    justify-content: space-around;
+    gap: 40px;
+    }
+    .list{
+        gap:30px;
+        
+    }
+h2 {
+font-family: Roboto;
+font-size: 20px;
+font-style: normal;
+font-weight: 500;
+line-height: 24px; /* 120% */
+letter-spacing: 0.4px;
+}
+.description{
+    text-align: center;
+}
+/** Styling of icon**/
+.top-icon{
+    padding: 24px 0px;
+    text-align: center;
+    background-color: var(--CLOUD);
+}
+.team ul .list{
+    text-align: center;
+    
+}
+.team-socials{
+    display: flex;
+    justify-content: space-around;
+}
+footer .team-socials {
+    display: flex;
+    justify-content: center;
+}
+.team-soci{
+    background-color: var(--IRIS);
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+.team-soci svg{
+    fill:white;
+}
+.team-caption{
+    background-color: var(--WHITE);
+    padding: 32px 0;
+}
+.our section{
+    background-color: var(--CLOUD);
+}
+
+.b-icon{
+    border: 1px solid #8e8f99;
+    padding:16px 32px;
+}
+.b-icon svg{
+    fill:#8e8f99 ;
+}
+.b-icon:hover svg, 
+.b-icon:focus svg{
+    fill: var(--IRIS)
+}
+.b-icon:hover, 
+.b-icon:focus{
+    border-color:var(--IRIS)
+}
+.customers ul{
+    justify-content: center;
+    padding-top: 120px;
+    padding-bottom: 120px;
+}
+/** portfolio styling**/
+.projects{
+    text-align: center;
+}
+.projects ul{
+    width: 100%;
+    flex-wrap: wrap;
+}
+.projects li{
+    width: 30%;
+}
+.projects li img{
+    width: 100%;
+}
+.project-cap{
+    padding: 40px 32px;
+}
+.picture-pic{
+    position: relative;
+    overflow: hidden;
+}
+.picture:hover .picture-pic-caption{
+    opacity:1;
+    transform: translateY(0%);
+}
+.picture-pic-caption{
+    position: absolute;
+    background-color: rgba(77,99,229,1);
+    color:white;
+    width: 100%;
+    height:100%;
+    top:0;
+    left:0;
+    opacity:0;
+    transform: translateY(100%);
+    transition: transform 0.25s cubic-bezier(0.4,0,0.2,1);
+}
+.picture{
+    overflow: hidden;
+}
+.picture-pic-caption p{
+    padding:40px 32px;
+}
+/* button styling */
+.port-btn{
+align-items: center;
+padding: 12px 24px; 
+border-radius: 4px;
+background-color: var(--OCEAN, #404BBF);
+box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.12), 0px 2px 1px 0px rgba(0, 0, 0, 0.08), 0px 3px 1px 0px rgba(0, 0, 0, 0.10);
+}
+
+.button-top{
+    display:flex;
+    justify-content: center;
+    gap: 24px;
+   
+}
+.sub-button{
+    display: flex;
+    text-align: end;
+}
+.b-ton{
+    
+    background-color:var(--IRIS);
+    border-radius: 5px;
+    text-align: center;
+    justify-content: center;
+    padding-bottom: 5px;
+    color: var(--WHITE);
+}
+.b-send{
+    fill: white;
+    
+}
+.checkbox-text{
+    color:black;
+}
+.send-b{
+            background-color: var(--IRIS);
+            color: var(--WHITE, #FFF);
+            text-align: center;
+            border-radius: 4px;
+            padding: 16px 32px;
+}
